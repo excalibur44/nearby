@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- customize css -->
+  <link href="css/zuzu.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <title>租租侠</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!--  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+  <script src="js/jquery.min.js"></script>
+  <!--  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+  <script src="js/bootstrap.min.js"></script>
+  <!--  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+  <!-- materialize -->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <style>
+    /* label color */
+    .input-field label {
+      /*color: #1A98D5;*/
+    }
+
+    /* label focus color */
+    .input-field input[type=number]:focus + label {
+      color: #1A98D5;
+    }
+    /* label underline focus color */
+    .input-field input[type=number]:focus {
+      border-bottom: 1px solid #1A98D5;
+      box-shadow: 0 1px 0 0 #1A98D5;
+    }
+    /* valid color */
+    .input-field input[type=number].valid {
+      border-bottom: 1px solid #1A98D5;
+      box-shadow: 0 1px 0 0 #1A98D5;
+    }
+    /* invalid color */
+    .input-field input[type=number].invalid {
+      border-bottom: 1px solid #1A98D5;
+      box-shadow: 0 1px 0 0 #1A98D5;
+    }
+
+    /* label focus color */
+    .input-field input[type=password]:focus + label {
+      color: #1A98D5;
+    }
+    /* label underline focus color */
+    .input-field input[type=password]:focus {
+      border-bottom: 1px solid #1A98D5;
+      box-shadow: 0 1px 0 0 #1A98D5;
+    }
+    /* valid color */
+    .input-field input[type=password].valid {
+      border-bottom: 1px solid #1A98D5;
+      box-shadow: 0 1px 0 0 #1A98D5;
+    }
+    /* invalid color */
+    .input-field input[type=password].invalid {
+      border-bottom: 1px solid #1A98D5;
+      box-shadow: 0 1px 0 0 #1A98D5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <!-- avatar -->
+      <div class="col-xs-6" style="padding-top: 64px; margin: 0 25%;">
+        <img src="img/zuzu.jpg" alt="logo"
+             class="img-responsive img-rounded" style="margin: auto; padding: 10px;">
+      </div>
+      <!-- LOGIN -->
+      <div class="col-xs-12" style="text-align: center; padding-top: 10px;">
+        <h5 style="color: #1A98D5;">登录</h5>
+      </div>
+      <!-- form -->
+      <div class="col-xs-12">
+        <form method="post" action="#">
+          <div class="input-field col s12">
+            <input id="stuid" name="stuid" type="number" class="validate">
+            <label for="stuid">学号</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="password" name="password" type="password" class="validate">
+            <label for="password">密码</label>
+          </div>
+          <button class="waves-effect waves-light btn-flat" style="float:right; color: #1A98D5">
+            <span style="font-size:18px; text-transform:capitalize">登录</span>
+          </button>
+        </form>
+        <a href="signup.html">
+          <button class="waves-effect waves-light btn-flat" style="color: #aaaaaa; margin-right: 16px; padding: 0 12px;">
+            <span style="text-transform:capitalize">还没注册？</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
