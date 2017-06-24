@@ -6,9 +6,9 @@
  * Time: 23:27
  */
 
-$dbname   = 'zuzu-dev';
-$user     = 'zuzu-dev';
-$password = 'happyzuzu';
+$dbname   = 'nearby';
+$user     = 'nearby';
+$password = 'nearby';
 
 $dbh = new PDO("mysql:host=localhost; dbname=$dbname", $user, $password);
 $dbh->query('set names utf8');
