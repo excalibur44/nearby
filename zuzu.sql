@@ -7,6 +7,7 @@ create table `user` (
   `password` varchar(40) NOT NULL,
   `phone` bigint(11) NOT NULL,
   `academy` varchar(15) NOT NULL,
+  `sex` VARCHAR(1) NOT NULL,
   `wechat` varchar(20) NOT NULL,
   `email` varchar(30) NOT NULL,
   `avatar` varchar(14) NOT NULL

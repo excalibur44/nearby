@@ -8,7 +8,7 @@
   <link href="css/nearby.css" rel="stylesheet">
 
   <!-- Bootstrap -->
-  <title>租租侠</title>
+  <title>深大镖局</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!--  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
   <script src="js/jquery.min.js"></script>
@@ -17,7 +17,7 @@
   <!--  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
   <!-- materialize -->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <style>
     /* label color */
@@ -29,16 +29,19 @@
     .input-field input[type=text]:focus + label {
       color: #1A98D5;
     }
+
     /* label underline focus color */
     .input-field input[type=text]:focus {
       border-bottom: 1px solid #1A98D5;
       box-shadow: 0 1px 0 0 #1A98D5;
     }
+
     /* valid color */
     .input-field input[type=text].valid {
       border-bottom: 1px solid #1A98D5;
       box-shadow: 0 1px 0 0 #1A98D5;
     }
+
     /* invalid color */
     .input-field input[type=text].invalid {
       border-bottom: 1px solid #1A98D5;
@@ -49,16 +52,19 @@
     .input-field input[type=number]:focus + label {
       color: #1A98D5;
     }
+
     /* label underline focus color */
     .input-field input[type=number]:focus {
       border-bottom: 1px solid #1A98D5;
       box-shadow: 0 1px 0 0 #1A98D5;
     }
+
     /* valid color */
     .input-field input[type=number].valid {
       border-bottom: 1px solid #1A98D5;
       box-shadow: 0 1px 0 0 #1A98D5;
     }
+
     /* invalid color */
     .input-field input[type=number].invalid {
       border-bottom: 1px solid #1A98D5;
@@ -69,16 +75,19 @@
     .input-field input[type=password]:focus + label {
       color: #1A98D5;
     }
+
     /* label underline focus color */
     .input-field input[type=password]:focus {
       border-bottom: 1px solid #1A98D5;
       box-shadow: 0 1px 0 0 #1A98D5;
     }
+
     /* valid color */
     .input-field input[type=password].valid {
       border-bottom: 1px solid #1A98D5;
       box-shadow: 0 1px 0 0 #1A98D5;
     }
+
     /* invalid color */
     .input-field input[type=password].invalid {
       border-bottom: 1px solid #1A98D5;
@@ -100,23 +109,49 @@
     </div>
     <!-- form -->
     <div class="col-xs-12">
-      <form method="post" action="#">
+      <form method="post" id="signUpForm" action="completeUserInfo.php">
         <div class="input-field col s12">
-          <input id="nickname" name="nickname" type="text" class="validate">
-          <label for="nickname">昵称</label>
+          <input id="username" name="username" type="text" class="validate" required>
+          <label for="username">昵称</label>
         </div>
         <div class="input-field col s12">
-          <input id="stuid" name="stuid" type="number" class="validate">
+          <input id="stuid" name="stuid" type="number" class="validate" required>
           <label for="stuid">学号</label>
         </div>
         <div class="input-field col s12">
-          <input id="password" name="password" type="password" class="validate">
+          <input id="password" name="password" type="password" class="validate" required>
           <label for="password">密码</label>
         </div>
-        <button class="waves-effect waves-light btn-flat" style="float:right; color: #1A98D5">
-          <span style="font-size:18px; text-transform:capitalize">注册</span>
-        </button>
+        <div class="input-field col s12">
+          <input id="password-repeat" type="password" class="validate" required>
+          <label for="password-repeat">重复密码</label>
+        </div>
       </form>
+
+      <button class="waves-effect waves-light btn-flat" onclick="sign_up()" style="float:right; color: #1A98D5">
+        <span style="font-size:18px; text-transform:capitalize">注册</span>
+      </button>
+      <script type="text/javascript">
+          function sign_up() {
+              var passwd = [];
+              $("input[type=password]").each(function () {
+                  passwd.push($(this).val());
+              });
+              var passwd1 = passwd[0];
+              var passwd2 = passwd[1];
+
+              if (passwd1.length < 6) {
+                  alert("密码要大于6位");
+              }
+              else {
+                  if (passwd1 !== passwd2)
+                      alert("两次密码不相同！");
+                  else
+                      document.getElementById("signUpForm").submit();
+              }
+          }
+      </script>
+
       <a href="login.html">
         <button class="waves-effect waves-light btn-flat" style="color: #aaaaaa; margin-right: 16px; padding: 0 12px;">
           <span style="text-transform:capitalize">已经注册？</span>

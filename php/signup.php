@@ -1,6 +1,6 @@
 <?php
-include "config.php";
-include "generateAvatar.php";
+include_once "config.php";
+include_once "generateAvatar.php";
 //var_dump($_POST);
 
 //检测用户是否已存在
