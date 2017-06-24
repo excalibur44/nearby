@@ -1,7 +1,7 @@
 <?php
-include "config.php";
-include "isLogin.php";
-include "generateAvatar.php";
+include_once "config.php";
+include_once "isLogin.php";
+include_once "generateAvatar.php";
 $stuid = $_COOKIE['stuid'];
 //var_dump($_POST);
 
