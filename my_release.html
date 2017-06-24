@@ -9,100 +9,96 @@
   <!-- Bootstrap -->
   <title>深大镖局</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-<!--  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+  <!--  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
   <script src="js/jquery.min.js"></script>
-<!--  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+  <!--  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
   <script src="js/bootstrap.min.js"></script>
-<!--  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+  <!--  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </head>
 
-<body>
-  <main class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12">
-          <div class="row">
-              <div class="col-xs-12">
-                  <p>主题</p>
-              </div>
-            </div>
-        <div class="row">
-          <div class="col-xs-12" style="text-align: center;">
-            <div class="input-group" style="width: 100%;">            
-                <input type="text" class="form-control" placeholder="请输入您的主题" >
-            </div><!-- /input-group -->
-          </div>
-        </div>
-         <div class="row">
-          <div class="col-xs-12">
-            <p>详细信息</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-                <textarea cols="44" id="comment_body" rows="10" placeholder="在此编辑您的详细内容" ></textarea>
-            </div>
-          </div>
+<body style="background-color: #eeeeee">
+<main class="container-fluid">
 
-          <div class="row" style="background-color: #fff; border-radius: 5px; 
-          margin-bottom: 6px; width: 330px;margin-left: 4px;">
-            <div class="col-xs-4" style="text-align: center;">
-              <span class="glyphicon glyphicon-time" ></span><br>任务时限
-            </div>
-             <div class="col-xs-8" style="padding-top: 5px;">
-             <span>点击设置时限</span>
-            </div>
-          </div>
+  <div class="row" style="margin-top: 10px;">
+    <div class="col-xs-12">
+      <div class="input-group" style="width: 100%;">
+        <label>主题</label>
+        <input type="text" class="form-control" placeholder="请输入您的主题">
+      </div>
+    </div>
 
-          <div class="row" style="background-color: #fff; border-radius: 5px; margin-bottom: 6px; margin-left: 4px;  width: 330px;">
-            <div class="col-xs-4" style="text-align: center;">
-              <span class="glyphicon glyphicon-map-marker" ></span><br>地址
-            </div>
-             <div class="col-xs-8" style="padding-top: 5px;">
-             <span>点击设置送达地点</span>
-            </div>
-          </div>
-
-          <div class="row" style="background-color: #fff; border-radius: 5px; margin-bottom: 6px;margin-left: 4px; width: 330px;">
-            <div class="col-xs-4" style="text-align: center;">
-              <span class="glyphicon glyphicon-yen" ></span><br>报酬
-            </div>
-             <div class="col-xs-8" style="padding-top: 5px;">
-             <span>打赏</span>
-            </div>
-          </div>
-          <p>qing</p><input type="time">
-            
+    <div class="col-xs-12">
+      <div class="input-group" style="width: 100%;">
+        <label>详细信息</label>
+        <textarea cols="44" id="comment_body" rows="10" placeholder="在此编辑您的详细内容"></textarea>
+      </div>
     </div>
   </div>
- 
-  </main>
 
-
-  <header class="col-xs-12" style="position:fixed;">
-    <div class="row">
-
-     <div class="col-xs-3" style="padding-top: 12px;" >
-          <a href="home.html" style="color:  #000;">
-          <span class="glyphicon glyphicon-chevron-left"  font-size: 15px;"></span>
-          </a>       
-      </div>
-      <div class="col-xs-9" style="padding-top: 13px;padding-left: 36px;">
-        <h3 style="margin: 0; color: #1A98D5;">发布需求</h3>
-      </div>
+  <div class="row"
+       style="background-color: #fff; border-radius: 5px; margin-bottom: 6px; width: 330px;margin-left: 4px;">
+    <div class="col-xs-4" style="text-align: center;">
+      <label>
+        <span class="glyphicon glyphicon-time"></span><br>任务时限
+      </label>
     </div>
-    
-  </header>
-
-
-
-  <footer class="col-xs-12" style="position:fixed;">
-    <div class="row" style="text-align: center; color: #aaaaaa; padding-top: 14px">
-      <div class="col-xs-12" style="color: #1A98D5;">
-       <a href="success.html">
-          <button type="button" class="btn btn-primary" style="width: 200px;">点击发布</button>
-       </a> 
+    <div class="col-xs-8" style="padding-top: 5px;">
+      <input placeholder="点击设置时限" style="border: none">
     </div>
+  </div>
+
+  <div class="row"
+       style="background-color: #fff; border-radius: 5px; margin-bottom: 6px; margin-left: 4px;  width: 330px;">
+    <div class="col-xs-4" style="text-align: center;">
+      <label>
+        <span class="glyphicon glyphicon-map-marker"></span><br>地址
+      </label>
     </div>
-  </footer>
+    <div class="col-xs-8" style="padding-top: 5px;">
+      <input placeholder="点击设置送达地点" style="border: none">
+    </div>
+  </div>
+
+  <div class="row"
+       style="background-color: #fff; border-radius: 5px; margin-bottom: 6px;margin-left: 4px; width: 330px;">
+    <div class="col-xs-4" style="text-align: center;">
+      <label>
+        <span class="glyphicon glyphicon-yen"></span><br>报酬
+      </label>
+    </div>
+    <div class="col-xs-8" style="padding-top: 5px;">
+      <input placeholder="打赏" style="border: none">
+    </div>
+  </div>
+
+</main>
+
+
+<header class="col-xs-12" style="position:fixed;">
+  <div class="row">
+
+    <div class="col-xs-3" style="padding-top: 18px;">
+      <a href="home.html" style="color:  #000;">
+        <span class="glyphicon glyphicon-chevron-left" style="font-size: 15px;"></span>
+      </a>
+    </div>
+    <div class="col-xs-9" style="padding-top: 13px;padding-left: 36px;">
+      <h2 style="margin: 0; color: #1A98D5;">发布需求</h2>
+    </div>
+  </div>
+
+</header>
+
+
+<footer class="col-xs-12" style="position:fixed;">
+  <div class="row" style="text-align: center; color: #aaaaaa; padding-top: 14px">
+    <div class="col-xs-12" style="color: #1A98D5;">
+      <a href="success.html">
+        <button type="button" class="btn btn-default"
+                style="width: 100%; border: none">点击发布</button>
+      </a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
