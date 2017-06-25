@@ -1,3 +1,14 @@
+<?php
+include_once "php/config.php";
+include_once "php/doNotCache.php";
+$sql = 'SELECT taskid, avatar, detail, username, price, time FROM task, user, record
+        WHERE record.accepter = :stuid AND user.stuid = task.stuid AND task.taskid = record.taskid ORDER BY task.time DESC ;';
+$array = array(
+  'stuid' => $_COOKIE['stuid']//2016222003
+);
+$data = sql_select($sql, $array);
+//var_dump($data);
+?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -15,7 +26,7 @@
   <script src="js/bootstrap.min.js"></script>
   <!--  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </head>
-<body>
+<body style="background-color: #eeeeee;">
 <!-- 任务列表-->
 <!--      transaction 1-->
 <main class="container-fluid" style="padding-top: 90px;">
@@ -122,10 +133,10 @@
   </div>
   <div class="row"
        style="margin-top: 8px; padding-top: 8px; text-align: center; border-top: solid 1px #eeeeee; color: #aaaaaa;">
-    <a href="order_my_release.html" style="text-decoration: none; color: #aaaaaa;">
+    <a href="order_my_release.php" style="text-decoration: none; color: #aaaaaa;">
       <div class="col-xs-6" style="color: #aaaaaa; border-right: solid 1px #eeeeee;">我发布的</div>
     </a>
-    <a href="order_my_task.html" style="text-decoration: none; color: #aaaaaa;">
+    <a href="order_my_task.php" style="text-decoration: none; color: #aaaaaa;">
       <div class="col-xs-6" style="color: #1A98D5;">我的任务</div>
     </a>
   </div>

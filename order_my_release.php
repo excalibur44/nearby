@@ -1,3 +1,14 @@
+<?php
+include_once "php/config.php";
+include_once "php/doNotCache.php";
+$sql = 'SELECT task.taskid, avatar, detail, username, price, task.time, task.status status FROM task, user
+        WHERE task.stuid = :stuid AND user.stuid = task.stuid ORDER BY task.time DESC ;';
+$array = array(
+  'stuid' => $_COOKIE['stuid']//2016222003
+);
+$data = sql_select($sql, $array);
+//var_dump($data);
+?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -15,93 +26,50 @@
   <script src="js/bootstrap.min.js"></script>
   <!--  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </head>
-<body>
-<!-- 任务列表-->
-<!--      transaction 1-->
+<body style="background-color: #eeeeee;">
 <main class="container-fluid" style="padding-top: 90px;">
   <!-- 任务列表-->
   <div class="row">
-    <!-- transaction 1 -->
-    <div class="col-xs-12 card-box">
-      <div class="card">
-        <img src="avatar/avatar_1.jpg" style="height: 96px; width: 96px; float: left;"
-             alt="item-1-main-photo" class="img-responsive img-rounded">
-        <div class="row" style="padding: 0 10px; height: 100%; float: left; width: calc(100% - 76px);">
-          <div class="col-xs-12" style="height: 33%;">
-            <span style="font-weight: bold; font-size: 22px;">发布者名称</span>
-            <span style="float: right">未完成</span>
+<?php
+for ($i = 0; $i < count($data); $i++) {
+  $avatar = $data[$i]['avatar'];
+  $username = $data[$i]['username'];
+  $detail = $data[$i]['detail'];
+  $time = $data[$i]['time'];
+  $price = $data[$i]['price'];
+  $taskid = $data[$i]['taskid'];
+  $status = ($data[$i]['status'] == 0)?'未被抢':'已被抢';
+
+  echo "
+    <!-- transaction $i -->
+    <div class=\"col-xs-12 card-box\">
+      <div class=\"card\">
+        <img src=\"avatar/avatar_1.jpg\" style=\"height: 96px; width: 96px; float: left;\"
+             alt=\"item-1-main-photo\" class=\"img-responsive img-rounded\">
+        <div class=\"row\" style=\"padding: 0 10px; height: 100%; float: left; width: calc(100% - 76px);\">
+          <div class=\"col-xs-12\" style=\"height: 33%;\">
+            <span style=\"font-weight: bold; font-size: 22px;\">$username</span>
+            <span style=\"float: right\"></span>
           </div>
-          <div class="col-xs-12" style="height: 33%; color: #1A98D5; margin-top: 8px;">有谁顺路。。。。。。</div>
-          <div class="col-xs-12"
-               style="height: 33%; color: #cccccc; margin-top: 9px; padding-right: 0; font-size: 12px;">
-            悬赏金额：X元
-            <span style="float: right;">一分钟前</span>
+          <div class=\"col-xs-12\" style=\"height: 33%; color: #1A98D5; margin-top: 8px;\">$detail</div>
+          <div class=\"col-xs-12\"
+               style=\"height: 33%; color: #cccccc; margin-top: 9px; padding-right: 0; font-size: 12px;\">
+            悬赏金额：$price 元
+            <span style=\"float: right;\">$time</span>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-12" style="">
-            <button class="btn btn-default btn-block" type="button"
-                    style="color: #1A98D5; margin-top: 4px;">
-              未被抢
+        <div class=\"row\">
+          <div class=\"col-xs-12\" style=\"\">
+            <button class=\"btn btn-default btn-block\" type=\"button\"
+                    style=\"color: #aaaaaa; margin-top: 4px;\">
+              $status
             </button>
           </div>
         </div>
       </div>
-    </div>
-    <!-- transaction 2 -->
-    <div class="col-xs-12 card-box">
-      <div class="card">
-        <img src="avatar/avatar_2.jpg" style="height: 96px; width: 96px; float: left;"
-             alt="item-1-main-photo" class="img-responsive img-rounded">
-        <div class="row" style="padding: 0 10px; height: 100%; float: left; width: calc(100% - 76px);">
-          <div class="col-xs-12" style="height: 33%;">
-            <span style="font-weight: bold; font-size: 22px;">发布者名称</span>
-            <span style="float: right">未完成</span>
-          </div>
-          <div class="col-xs-12" style="height: 33%; color: #1A98D5; margin-top: 8px;">有谁顺路。。。。。。</div>
-          <div class="col-xs-12"
-               style="height: 33%; color: #cccccc; margin-top: 9px; padding-right: 0; font-size: 12px;">
-            悬赏金额：X元
-            <span style="float: right;">一分钟前</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12" style="">
-            <button class="btn btn-default btn-block" type="button"
-                    style="color: #1A98D5; margin-top: 4px;">
-              未被抢
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- transaction 3 -->
-    <div class="col-xs-12 card-box">
-      <div class="card">
-        <img src="avatar/avatar_3.jpg" style="height: 96px; width: 96px; float: left;"
-             alt="item-1-main-photo" class="img-responsive img-rounded">
-        <div class="row" style="padding: 0 10px; height: 100%; float: left; width: calc(100% - 76px);">
-          <div class="col-xs-12" style="height: 33%;">
-            <span style="font-weight: bold; font-size: 22px;">发布者名称</span>
-            <span style="float: right">未完成</span>
-          </div>
-          <div class="col-xs-12" style="height: 33%; color: #1A98D5; margin-top: 8px;">有谁顺路。。。。。。</div>
-          <div class="col-xs-12"
-               style="height: 33%; color: #cccccc; margin-top: 9px; padding-right: 0; font-size: 12px;">
-            悬赏金额：X元
-            <span style="float: right;">一分钟前</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12" style="">
-            <button class="btn btn-default btn-block" type="button"
-                    style="color: #1A98D5; margin-top: 4px;">
-              已被抢
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    </div>";
+}
+?>
   </div>
 </main>
 
@@ -122,10 +90,10 @@
   </div>
   <div class="row"
        style="margin-top: 8px; padding-top: 8px; text-align: center; border-top: solid 1px #eeeeee; color: #aaaaaa;">
-    <a href="order_my_release.html" style="text-decoration: none; color: #aaaaaa;">
+    <a href="order_my_release.php" style="text-decoration: none; color: #aaaaaa;">
       <div class="col-xs-6" style="color: #1A98D5; border-right: solid 1px #eeeeee;">我发布的</div>
     </a>
-    <a href="order_my_task.html" style="text-decoration: none; color: #aaaaaa;">
+    <a href="order_my_task.php" style="text-decoration: none; color: #aaaaaa;">
       <div class="col-xs-6" style="color: #aaaaaa;">我的任务</div>
     </a>
   </div>
