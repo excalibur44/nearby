@@ -24,7 +24,7 @@
     <!-- transaction 1 -->
     <div class="col-xs-12 card-box">
       <div class="card">
-        <img src="img/avatar_1.jpg" style="height: 96px; width: 96px; float: left;"
+        <img src="avatar/avatar_1.jpg" style="height: 96px; width: 96px; float: left;"
              alt="item-1-main-photo" class="img-responsive img-rounded">
         <div class="row" style="padding: 0 10px; height: 100%; float: left; width: calc(100% - 76px);">
           <div class="col-xs-12" style="height: 33%;">
@@ -42,7 +42,7 @@
           <div class="col-xs-12" style="">
             <button class="btn btn-default btn-block" type="button"
                     style="color: #1A98D5; margin-top: 4px;">
-              未被抢
+              未完成
             </button>
           </div>
         </div>
@@ -51,7 +51,7 @@
     <!-- transaction 2 -->
     <div class="col-xs-12 card-box">
       <div class="card">
-        <img src="img/avatar_2.jpg" style="height: 96px; width: 96px; float: left;"
+        <img src="avatar/avatar_2.jpg" style="height: 96px; width: 96px; float: left;"
              alt="item-1-main-photo" class="img-responsive img-rounded">
         <div class="row" style="padding: 0 10px; height: 100%; float: left; width: calc(100% - 76px);">
           <div class="col-xs-12" style="height: 33%;">
@@ -69,7 +69,7 @@
           <div class="col-xs-12" style="">
             <button class="btn btn-default btn-block" type="button"
                     style="color: #1A98D5; margin-top: 4px;">
-              未被抢
+              未完成
             </button>
           </div>
         </div>
@@ -78,7 +78,7 @@
     <!-- transaction 3 -->
     <div class="col-xs-12 card-box">
       <div class="card">
-        <img src="img/avatar_3.jpg" style="height: 96px; width: 96px; float: left;"
+        <img src="avatar/avatar_3.jpg" style="height: 96px; width: 96px; float: left;"
              alt="item-1-main-photo" class="img-responsive img-rounded">
         <div class="row" style="padding: 0 10px; height: 100%; float: left; width: calc(100% - 76px);">
           <div class="col-xs-12" style="height: 33%;">
@@ -96,7 +96,7 @@
           <div class="col-xs-12" style="">
             <button class="btn btn-default btn-block" type="button"
                     style="color: #1A98D5; margin-top: 4px;">
-              已被抢
+              已完成
             </button>
           </div>
         </div>
@@ -123,10 +123,10 @@
   <div class="row"
        style="margin-top: 8px; padding-top: 8px; text-align: center; border-top: solid 1px #eeeeee; color: #aaaaaa;">
     <a href="order_my_release.html" style="text-decoration: none; color: #aaaaaa;">
-      <div class="col-xs-6" style="color: #1A98D5; border-right: solid 1px #eeeeee;">我发布的</div>
+      <div class="col-xs-6" style="color: #aaaaaa; border-right: solid 1px #eeeeee;">我发布的</div>
     </a>
     <a href="order_my_task.html" style="text-decoration: none; color: #aaaaaa;">
-      <div class="col-xs-6" style="color: #aaaaaa;">我的任务</div>
+      <div class="col-xs-6" style="color: #1A98D5;">我的任务</div>
     </a>
   </div>
 </header>
