@@ -21,6 +21,7 @@ CREATE TABLE `task` (
   `time` datetime NOT NULL,
   `location` varchar(20) NOT NULL,
   `price` int(4) NOT NULL,
+  `status` int(1) DEFAULT '0',
   foreign key(stuid) references user(stuid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='任务表';
 

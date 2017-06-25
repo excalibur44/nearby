@@ -18,7 +18,7 @@ $location = $_POST['location'];
 $price    = $_POST['price'];
 
 
-$sql = "INSERT INTO `task` VALUES (:taskid, :stuid, :theme, :detail, :time, :location, :price); ";
+$sql = "INSERT INTO `task` VALUES (:taskid, :stuid, :theme, :detail, :time, :location, :price, :status); ";
 $parameter = array(
     ":taskid"   => $taskid,
     ":stuid"    => $stuid,
@@ -26,7 +26,8 @@ $parameter = array(
     ":detail"   => $detail,
     ":time"     => $time,
     ":location" => $location,
-    ":price"    => $price
+    ":price"    => $price,
+    ":status"   => 0
 );
 //构造PDO预处理语句
 $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));

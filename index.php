@@ -88,9 +88,13 @@ $data = sql_select($sql);
   <div class="row">
     <div class="col-xs-3" style="padding-left: 25px; padding-top: 20px;">
       <h4 style="margin: 0;">
-        <a href="login.html" style="color: #1A98D5;">
-          login
-        </a>
+        <?php
+        if ( !isset($_COOKIE['token']) )
+          echo "
+            <a href=\"login.html\" style=\"color: #1A98D5;\">
+              登录
+            </a>";
+        ?>
       </h4>
     </div>
     <div class="col-xs-6" style="padding-top: 13px;">
@@ -110,7 +114,7 @@ $data = sql_select($sql);
       <span class="glyphicon glyphicon-home"></span> <br>
       首页
     </div>
-    <a href="order_my_release.html" style="color: #aaaaaa;">
+    <a href="order_my_release.php" style="color: #aaaaaa;">
       <div class="col-xs-4">
         <span class="glyphicon glyphicon-calendar"></span> <br>
         订单

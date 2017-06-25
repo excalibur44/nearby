@@ -115,7 +115,7 @@ $data = $data[0];
         首页
       </div>
     </a>
-    <a href="order_my_release.html" style="color: #aaaaaa;">
+    <a href="order_my_release.php" style="color: #aaaaaa;">
       <div class="col-xs-4"><span class="glyphicon glyphicon-calendar"></span> <br>
         订单
       </div>
