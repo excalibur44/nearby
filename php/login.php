@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include_once "config.php";
 
 $stuid    = $_POST['stuid'];
 $password = $_POST['password'];

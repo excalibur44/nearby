@@ -113,7 +113,7 @@ $academyList = array('师范学院', '人文学院', '外国语学院', '传播�
 <footer class="col-xs-12" style="position:fixed;">
   <div class="row" style="text-align: center; color: #aaaaaa; padding-top: 14px">
     <div class="col-xs-12" id="submit-button" style="color: #1A98D5; display: block;">
-      <button form="borrowInForm" type="submit" style="width: 100%; border: none; background-color: #ffffff;">
+      <button form="editUserInfo" type="submit" style="width: 100%; border: none; background-color: #ffffff;">
         确认修改
       </button>
     </div>

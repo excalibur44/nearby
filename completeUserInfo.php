@@ -44,7 +44,7 @@
               <select id="academy" name="academy" class="form-control" required>
 <?php
 $academyList = array('师范学院', '人文学院', '外国语学院', '传播学院', '经济学院', '管理学院', '法学院', '艺术设计学院',
-  '数学与统计学院', '物理与能源学院', '化学与环境工程学院学院', '材料学院', '信息工程学院', '计算机与软件学院', '建筑与城市规划学院',
+  '数学与统计学院', '物理与能源学院', '化学与环境工程学院', '材料学院', '信息工程学院', '计算机与软件学院', '建筑与城市规划学院',
   '土木工程学院', '机电与控制工程学院', '电子科学技术学院', '生命与海洋科学学院', '光电工程学院', '高尔夫学院', '高等研究院');
 foreach ($academyList as $academy) {
   echo         "<option value=\"$academy\">$academy</option>";
@@ -93,7 +93,7 @@ foreach ($academyList as $academy) {
       </div>
     </a>
     <div class="col-xs-6" style="padding-top: 13px;">
-      <h2 style="text-align: center; margin: 0; color: #1A98D5;">租租侠</h2>
+      <h2 style="text-align: center; margin: 0; color: #1A98D5;">深大镖局</h2>
     </div>
     <div class="col-xs-3" style="padding-top: 12px;"></div>
   </div>

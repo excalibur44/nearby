@@ -85,7 +85,6 @@ $RECYCLE.BIN/
 # Other Files
 # =========================
 *.ffs_db
-*/itemPhoto/*
-*/.idea/*
 .idea/*
 itemPhoto/*
+avatar/*
