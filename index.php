@@ -101,7 +101,7 @@ $data = sql_select($sql);
       <h2 style="text-align: center; margin: 0; color: #1A98D5;">深大镖局</h2>
     </div>
     <div class="col-xs-3" style="padding-top: 20px;">
-      <a href="newRelease.html" style="color:#444444; font-size: 15px;">
+      <a href="newRelease.php" style="color:#444444; font-size: 15px;">
         <span class="glyphicon glyphicon-plus" style="float: right;">发布</span>
       </a>
     </div>

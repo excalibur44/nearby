@@ -1,3 +1,6 @@
+<?php
+include_once "php/isLogin.php";
+?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>

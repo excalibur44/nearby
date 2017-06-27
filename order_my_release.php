@@ -1,6 +1,8 @@
 <?php
 include_once "php/config.php";
 include_once "php/doNotCache.php";
+include_once "php/isLogin.php";
+
 $sql = 'SELECT task.taskid, avatar, detail, username, price, task.time, task.status status FROM task, user
         WHERE task.stuid = :stuid AND user.stuid = task.stuid ORDER BY task.time DESC ;';
 $array = array(
